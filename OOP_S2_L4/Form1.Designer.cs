@@ -102,7 +102,7 @@
             // 
             this.minNumberLabel.AutoSize = true;
             this.minNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.minNumberLabel.Location = new System.Drawing.Point(287, 25);
+            this.minNumberLabel.Location = new System.Drawing.Point(287, 23);
             this.minNumberLabel.Name = "minNumberLabel";
             this.minNumberLabel.Size = new System.Drawing.Size(91, 20);
             this.minNumberLabel.TabIndex = 5;
@@ -157,10 +157,12 @@
             // 
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridView.Location = new System.Drawing.Point(16, 112);
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 25;
             this.dataGridView.Size = new System.Drawing.Size(650, 319);
             this.dataGridView.TabIndex = 12;
             // 

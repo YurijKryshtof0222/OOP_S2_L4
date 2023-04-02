@@ -4,13 +4,13 @@ using System.Linq;
 
 namespace OOP_S2_L4
 {
-    internal class RectangleMatrix
+    internal class RectangularMatrix
     {
         private int[][] matrix;
         private int rows;
         private int cols;
 
-        public RectangleMatrix(int rows, int cols)
+        public RectangularMatrix(int rows, int cols)
         {
             this.rows = rows;
             this.cols = cols;
@@ -76,7 +76,7 @@ namespace OOP_S2_L4
             return -1; //Якщо стовпців без від'ємних чисел нема.
         }
 
-        public RectangleMatrix GetSortedMatrix_ByMaxTheSameNumberCount_OfEachRow()
+        public RectangularMatrix GetSortedMatrix_ByMaxTheSameNumberCount_OfEachRow()
         {
             //Список пар: макс. к-ть повторюваних е-ів на кожен рядок.  
             var maxTheSameNumberCount_OfEachRow = new List<KeyValuePair<int, int>>();
@@ -99,7 +99,7 @@ namespace OOP_S2_L4
                 maxTheSameNumberCount_OfEachRow.Add(new KeyValuePair<int, int>(maxElemCount, i)); //всталяєм пару
             }
             maxTheSameNumberCount_OfEachRow.Sort((x, y) => x.Key.CompareTo(y.Key)); //Сортуєм по к-ті повторень числа на рядок
-            RectangleMatrix newMatrix = new RectangleMatrix(rows, cols); //нова матриця
+            RectangularMatrix newMatrix = new RectangularMatrix(rows, cols); //нова матриця
             int dstRowIndex = 0;
             foreach (var entry in maxTheSameNumberCount_OfEachRow)
             {

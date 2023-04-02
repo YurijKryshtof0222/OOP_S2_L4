@@ -12,7 +12,7 @@ namespace OOP_S2_L4
 {
     public partial class Form1 : Form
     {
-        RectangleMatrix matrix;
+        RectangularMatrix matrix;
         public Form1()
         {
             InitializeComponent();
@@ -49,7 +49,7 @@ namespace OOP_S2_L4
                 int rows = int.Parse(rowsTextBox.Text);
                 int cols = int.Parse(colsTextBox.Text);
 
-                matrix = new RectangleMatrix(rows, cols);
+                matrix = new RectangularMatrix(rows, cols);
 
                 int min = int.Parse(minNumberTextBox.Text);
                 int max = int.Parse(maxNumberTextBox.Text);
@@ -74,7 +74,7 @@ namespace OOP_S2_L4
             
         }
 
-        private void ShowNewMatrix(RectangleMatrix matrix)
+        private void ShowNewMatrix(RectangularMatrix matrix)
         {
             DataTable dt = new DataTable();
             int rows = matrix.GetRows();
